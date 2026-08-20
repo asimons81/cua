@@ -123,6 +123,7 @@ jobs:
       - name: Validate focused Rust contract
         working-directory: libs/cua-driver/rust
         run: |
+          cargo fmt --all
           cargo fmt --all -- --check
           cargo test -p cua-driver manifest_has_documented_top_level_shape --no-default-features
           cargo test -p cua-driver manifest_features_match_target_and_build_flags --no-default-features
